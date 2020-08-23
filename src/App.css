@@ -4,6 +4,11 @@
   justify-content: space-evenly;
   grid-row-gap: 30px;
 }
+
+.check-icon {
+  color: green
+}
+
 @media only screen and (max-width: 975px) {
   .App {
     display: grid;
