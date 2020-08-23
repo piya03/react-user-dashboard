@@ -15,7 +15,8 @@ function Modal(props) {
       className={`modal fixed w-full h-full top-0 left-0 flex items-center justify-center`}
     >
       <div
-        className={`modal-container bg-white w-11/12 md:max-w-md
+        style={{ height: "400px" }}
+        className={`modal-container bg-white w-11/12 md:max-w-md lg:max-w-3xl
          mx-auto rounded shadow-lg  overflow-y-auto`}
       >
         <div

@@ -42,6 +42,7 @@
     transition: opacity 0.25s ease;
     z-index: 10050;
     background: rgba(0, 0, 0, 0.44) 0% 0% no-repeat padding-box;
+   
   }
   
   /* ///for mobile */
@@ -82,4 +83,35 @@
 
     .info-icon {
         color: orange
+    }
+
+    .smily-icon{
+        font-size: 40px;
+        color: teal;
+        display: flex;
+        margin-top: 40px;
+    }
+    .noActivity{
+        position: relative;
+    top: -11px;
+    left: -7px;
+    }
+
+    .calendar-input {
+        border: 1px solid;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    }
+
+    .user-modal-header {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 12px;
+    }
+
+    .modal-container {
+        min-height: 200px; 
     }

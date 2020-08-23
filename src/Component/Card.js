@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faInfoCircle,
+  faSmile,
+  faPenAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
 import Modal from "./Modal";
 
+const DATE_FORMAT_V1 = "MMM DD YYYY h:mmA";
+const DATE_FORMAT_V2 = "YYYY-MM-DD HH:mm";
+const DATE_FORMAT_V3 = "hh:mm A";
+const DATE_FORMAT_V4 = "YYYY-MM-DD";
+
 function Card({ each }) {
   const activities = (each?.activity_periods || []).sort((a, b) => {
-    let atime = moment(a.start_time, "MMM DD YYYY h:mmA").format(
-      "YYYY-MM-DD HH:mm"
-    );
-    let btime = moment(b.start_time, "MMM DD YYYY h:mmA").format(
-      "YYYY-MM-DD HH:mm"
-    );
+    let atime = moment(a.start_time, DATE_FORMAT_V1).format(DATE_FORMAT_V2);
+    let btime = moment(b.start_time, DATE_FORMAT_V1).format(DATE_FORMAT_V2);
     return atime > btime ? 1 : -1;
   });
 
@@ -26,13 +32,22 @@ function Card({ each }) {
   let currentDate = `${year}-${month}-${date}`;
 
   console.log("Card -> currentDate", currentDate);
-  const [dateVal, setDateVal] = useState(currentDate);
-  console.log("Card -> dateVal", dateVal);
+  const [selectedDate, setselectedDate] = useState(currentDate);
+  console.log("Card -> selectedDate", selectedDate);
+
+  //   2.pm
+  // 25
 
   const statsActivities = React.useMemo(() => {
     return activities.reduce(
       (acc, elem) => {
-        if (moment().isAfter(moment(elem.end_time, "MMM DD YYYY h:mmA"))) {
+        // moment(each.start_time, DATE_FORMAT_V1).isAfter(each.end_time, DATE_FORMAT_V1)
+
+        const isNowAfterThenEndTime = moment().isAfter(
+          moment(elem.end_time, DATE_FORMAT_V1)
+        );
+
+        if (isNowAfterThenEndTime) {
           acc.completed++;
         } else {
           acc.pending++;
@@ -45,24 +60,26 @@ function Card({ each }) {
       }
     );
   }, [each]);
-  console.log("statsActivities -> statsActivities", statsActivities);
 
-  //console.log()
-  // description: "Complete task AB",
-  // start_time: "Aug 23 2020  1:33PM",
-  // end_time: "Aug 23 2020 1:54PM",
-  //   let t = moment(elem.start_time, "MMM DD YYYY h:mmA").format("hh:mm A");
-  //   console.log("statsActivities -> t", t);
-
-  //let t = moment(elem.start_time, "MMM DD YYYY h:mmA").format("hh:mm A");
   function formatTime(Time) {
-    return moment(Time, "MMM DD YYYY h:mmA").format("hh:mm A");
+    return moment(Time, DATE_FORMAT_V1).format(DATE_FORMAT_V3);
   }
-  //   let dateOnly = moment("jul 23 2020  1:33PM", "MMM DD YYYY h:mmA").format(
-  //     "YYYY-MM-DD"
-  //   );
-  //   console.log("Card -> dateOnly", dateOnly);
-  //   console.log("Card -> see", dateOnly === dateVal);
+
+  let activitiesAfterApplyingFilter = activities
+    .map((elem, index) => {
+      // {stae, enf}
+      // moment(24 matchMedia, 19991)
+      let activityStartTimeFormatted = moment(
+        elem.start_time,
+        DATE_FORMAT_V1
+      ).format(DATE_FORMAT_V4);
+
+      if (activityStartTimeFormatted !== selectedDate) {
+        return null;
+      }
+      return elem;
+    })
+    .filter(Boolean);
 
   return (
     <div>
@@ -104,52 +121,57 @@ function Card({ each }) {
 
       {show && (
         <Modal show={true} setShow={setShow}>
-          <div className="flex justify-between">
-            <div>Activites on</div>
+          <div className="user-modal-header">
+            {`${each?.realname}'s`} Activites
+          </div>
+          <div className="flex justify-end mb-10">
             <input
+              className="calendar-input"
               type="date"
-              value={dateVal}
+              value={selectedDate}
               onChange={(e) => {
-                console.log("App -hfhfghfg> e", e.target.value);
-                setDateVal(e.target.value);
+                console.log("App6 -hfhfghfg> e", e.target.value);
+                setselectedDate(e.target.value);
               }}
             />
           </div>
 
-          {activities.map((elem, index) => {
-            let dateOnly = moment(elem.start_time, "MMM DD YYYY h:mmA").format(
-              "YYYY-MM-DD"
-            );
-
+          {activitiesAfterApplyingFilter.map((elem, index) => {
             let isCompleted = moment().isAfter(
-              moment(elem.end_time, "MMM DD YYYY h:mmA")
+              moment(elem.end_time, DATE_FORMAT_V1)
             );
-            console.log("Card -> dateOnly", dateOnly);
-
-            if (dateOnly !== dateVal) {
-              return null;
-            }
 
             return (
-              <div className="modalContainer py-3">
-                {isCompleted ? (
-                  <FontAwesomeIcon icon={faCheck} className="check-icon" />
-                ) : (
-                  <FontAwesomeIcon icon={faInfoCircle} className="info-icon" />
-                )}
+              <div>
+                <div className="modalContainer py-3 items-center overflow-scroll">
+                  {isCompleted ? (
+                    <FontAwesomeIcon icon={faCheck} className="check-icon" />
+                  ) : (
+                    <FontAwesomeIcon
+                      icon={faInfoCircle}
+                      className="info-icon"
+                    />
+                  )}
 
-                <div>{elem?.description}</div>
-                <div className="text-sm">
-                  <p>START TIME</p>
-                  <p>{formatTime(elem?.start_time)} </p>
-                </div>
-                <div className="text-sm">
-                  <p>END TIME</p>
-                  <p>{formatTime(elem?.end_time)}</p>
+                  <div>{elem?.description}</div>
+                  <div className="text-sm">
+                    <p>START TIME</p>
+                    <p>{formatTime(elem?.start_time)} </p>
+                  </div>
+                  <div className="text-sm">
+                    <p>END TIME</p>
+                    <p>{formatTime(elem?.end_time)}</p>
+                  </div>
                 </div>
               </div>
             );
           })}
+          {activitiesAfterApplyingFilter.length === 0 && (
+            <div className="flex justify-center items-baseline">
+              <p className="noActivity pb-10">No Activity yet</p>
+              <FontAwesomeIcon icon={faSmile} className="smily-icon" />
+            </div>
+          )}
         </Modal>
       )}
     </div>
