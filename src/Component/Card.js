@@ -5,7 +5,6 @@ import {
   faCheck,
   faInfoCircle,
   faSmile,
-  faPenAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
 import Modal from "./Modal";
