@@ -21,7 +21,7 @@
 
  - Reactjs (hooks)
  - Tailwindcss
- - momentjs
+ - Momentjs
  - Font awesome
 
 ###  Helpful Links
