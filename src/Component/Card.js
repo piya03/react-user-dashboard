@@ -141,7 +141,7 @@ function Card({ each }) {
             );
 
             return (
-              <div>
+              <div key={index}>
                 <div className="modalContainer py-3 items-center overflow-scroll">
                   {isCompleted ? (
                     <FontAwesomeIcon icon={faCheck} className="check-icon" />
@@ -157,7 +157,7 @@ function Card({ each }) {
                     <p>START TIME</p>
                     <p>{formatTime(elem?.start_time)} </p>
                   </div>
-                  <div className="text-sm">
+                  <div className="text-sm end">
                     <p>END TIME</p>
                     <p>{formatTime(elem?.end_time)}</p>
                   </div>

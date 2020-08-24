@@ -13,23 +13,53 @@ const data = {
       activity_periods: [
         {
           description: "Complete task AB",
-          start_time: "Aug 23 2020  1:33PM",
+          start_time: "Aug 23 2020 1:33PM",
           end_time: "Aug 23 2020 1:54PM",
         },
         {
           description: "Complete task CD",
-          start_time: "Aug 23 2020  11:11AM",
+          start_time: "Aug 23 2020 11:11AM",
           end_time: "Aug 23 2020 2:00PM",
         },
         {
           description: "Complete task EF",
-          start_time: "Aug 23 2020  5:33PM",
+          start_time: "Aug 23 2020 5:33PM",
           end_time: "Aug 23 2020 8:02PM",
         },
         {
+          description: "Complete task EF",
+          start_time: "Aug 23 2020 2:33PM",
+          end_time: "Aug 23 2020 4:02PM",
+        },
+        {
+          description: "Complete task AB",
+          start_time: "Aug 24 2020 1:33PM",
+          end_time: "Aug 24 2020 1:54PM",
+        },
+        {
+          description: "Complete task CD",
+          start_time: "Aug 24 2020 11:11AM",
+          end_time: "Aug 24 2020 2:00PM",
+        },
+        {
+          description: "Complete task EF",
+          start_time: "Aug 24 2020 5:33PM",
+          end_time: "Aug 24 2020 8:02PM",
+        },
+        {
+          description: "Complete task EF",
+          start_time: "Aug 24 2020 2:33PM",
+          end_time: "Aug 24 2020 4:02PM",
+        },
+        {
           description: "Complete task GH",
-          start_time: "Aug 25 2020  7:33PM",
+          start_time: "Aug 25 2020 7:33PM",
           end_time: "Aug 25 2020 8:02PM",
+        },
+        {
+          description: "Complete task GH",
+          start_time: "Sep 01 2020 7:33PM",
+          end_time: "Sep 01 2020 8:02PM",
         },
       ],
     },
@@ -53,6 +83,16 @@ const data = {
           description: "Complete task EF",
           start_time: "Aug 26 2020  5:33PM",
           end_time: "Aug 26 2020 8:02PM",
+        },
+        {
+          description: "Complete task GH",
+          start_time: "Aug 27 2020 7:33PM",
+          end_time: "Aug 27 2020 8:02PM",
+        },
+        {
+          description: "Complete task GH",
+          start_time: "Aug 28 2020 7:33PM",
+          end_time: "Aug 28 2020 8:02PM",
         },
       ],
     },

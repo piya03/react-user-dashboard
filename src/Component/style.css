@@ -66,22 +66,12 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     border-bottom: 1px solid #d3cece;
-    
-  
+    grid-column-gap: 20px;
   }
-@media only screen and (max-width: 975px) {
-    .cardContainer {
-  max-width: 350px;
-  margin: auto;
-  
-    }
-    }
-
     .check-icon {
         color: green
     }
-
-    .info-icon {
+ .info-icon {
         color: orange
     }
 
@@ -115,3 +105,21 @@
     .modal-container {
         min-height: 200px; 
     }
+
+    @media only screen and (max-width: 975px) {
+        .cardContainer {
+      max-width: 350px;
+      margin: auto;
+      
+        }
+        }
+        @media only screen and (max-width: 600px) {
+            .modalContainer{
+                display: grid;
+                grid-template-columns: auto auto;
+                border-bottom: 1px solid #d3cece;
+              }
+              .end{
+                justify-self: end;
+              }
+            }

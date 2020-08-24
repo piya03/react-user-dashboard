@@ -2,6 +2,12 @@
 
 <p align="center"><img src="demo-images/demo.gif" width="300" align="center"></p>
 
+
+## To Test 
+
+First card  have activities for following days e.g  23 Aug, 2020, 24 Aug 2020, and 25 Aug 2020
+
+
 ### Steps to Run
 1. Clone this repository
 	```
