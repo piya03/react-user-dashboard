@@ -30,12 +30,7 @@ function Card({ each }) {
   date = date > 10 ? date : "0" + date;
   let currentDate = `${year}-${month}-${date}`;
 
-  console.log("Card -> currentDate", currentDate);
   const [selectedDate, setselectedDate] = useState(currentDate);
-  console.log("Card -> selectedDate", selectedDate);
-
-  //   2.pm
-  // 25
 
   const statsActivities = React.useMemo(() => {
     return activities.reduce(
@@ -129,7 +124,6 @@ function Card({ each }) {
               type="date"
               value={selectedDate}
               onChange={(e) => {
-                console.log("App6 -hfhfghfg> e", e.target.value);
                 setselectedDate(e.target.value);
               }}
             />
