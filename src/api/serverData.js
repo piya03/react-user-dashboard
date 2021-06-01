@@ -6,55 +6,55 @@ const data = {
   members: [
     {
       id: "1",
-      createdAt: "2020-08-22T03:04:51.898Z",
+      createdAt: "2021-06-01T03:04:51.898Z",
       realname: "Jordi Mueller",
       avatar:
         "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
-          start_time: "Aug 23 2020 1:33PM",
-          end_time: "Aug 23 2020 1:54PM",
+          start_time: "Jun 01 2021 1:33PM",
+          end_time: "Jun 01 2021 1:54PM",
         },
         {
           description: "Complete task CD",
-          start_time: "Aug 23 2020 11:11AM",
-          end_time: "Aug 23 2020 2:00PM",
+          start_time: "Jun 01 2021 11:11AM",
+          end_time: "Jun 01 2021 2:00PM",
         },
         {
           description: "Complete task EF",
-          start_time: "Aug 23 2020 5:33PM",
-          end_time: "Aug 23 2020 8:02PM",
+          start_time: "Jun 01 2021 5:33PM",
+          end_time: "Jun 01 2021 8:02PM",
         },
         {
           description: "Complete task EF",
-          start_time: "Aug 23 2020 2:33PM",
-          end_time: "Aug 23 2020 4:02PM",
+          start_time: "Jun 01 2021 2:33PM",
+          end_time: "Jun 01 2021 4:02PM",
         },
         {
           description: "Complete task AB",
-          start_time: "Aug 24 2020 1:33PM",
-          end_time: "Aug 24 2020 1:54PM",
+          start_time: "Jun 01 2021 1:33PM",
+          end_time: "Jun 01 2021 1:54PM",
         },
         {
           description: "Complete task CD",
-          start_time: "Aug 24 2020 11:11AM",
-          end_time: "Aug 24 2020 2:00PM",
+          start_time: "Jun 01 2021 11:11AM",
+          end_time: "Jun 01 2021 2:00PM",
         },
         {
           description: "Complete task EF",
-          start_time: "Aug 24 2020 5:33PM",
-          end_time: "Aug 24 2020 8:02PM",
+          start_time: "Jun 01 2021 5:33PM",
+          end_time: "Jun 01 2021 8:02PM",
         },
         {
           description: "Complete task EF",
-          start_time: "Aug 24 2020 2:33PM",
-          end_time: "Aug 24 2020 4:02PM",
+          start_time: "Jun 01 2021 2:33PM",
+          end_time: "Jun 01 2021 4:02PM",
         },
         {
           description: "Complete task GH",
-          start_time: "Aug 25 2020 7:33PM",
-          end_time: "Aug 25 2020 8:02PM",
+          start_time: "Jun 01 2021 7:33PM",
+          end_time: "Jun 01 2021 8:02PM",
         },
         {
           description: "Complete task GH",
@@ -71,28 +71,28 @@ const data = {
       activity_periods: [
         {
           description: "Complete task AB",
-          start_time: "Aug 24 2020  1:33PM",
-          end_time: "Aug 24 2020 1:54PM",
+          start_time: "Jun 02 2021  1:33PM",
+          end_time: "Jun 02 2021 1:54PM",
         },
         {
           description: "Complete task CD",
-          start_time: "Aug 25 2020  11:11AM",
-          end_time: "Aug 25 2020 2:00PM",
+          start_time: "Jun 02 2021  11:11AM",
+          end_time: "Jun 02 2021 2:00PM",
         },
         {
           description: "Complete task EF",
-          start_time: "Aug 26 2020  5:33PM",
-          end_time: "Aug 26 2020 8:02PM",
+          start_time: "Jun 02 2021  5:33PM",
+          end_time: "Jun 02 2021 8:02PM",
         },
         {
           description: "Complete task GH",
-          start_time: "Aug 27 2020 7:33PM",
-          end_time: "Aug 27 2020 8:02PM",
+          start_time: "Jun 02 2021 7:33PM",
+          end_time: "Jun 02 2021 8:02PM",
         },
         {
           description: "Complete task GH",
-          start_time: "Aug 28 2020 7:33PM",
-          end_time: "Aug 28 2020 8:02PM",
+          start_time: "Jun 02 20210 7:33PM",
+          end_time: "Jun 02 2021 8:02PM",
         },
       ],
     },
