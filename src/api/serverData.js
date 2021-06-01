@@ -9,7 +9,7 @@ const data = {
       createdAt: "2020-08-22T03:04:51.898Z",
       realname: "Jordi Mueller",
       avatar:
-        "https://s3.amazonaws.com/uifaces/faces/twitter/buryaknick/128.jpg",
+        "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
@@ -67,7 +67,7 @@ const data = {
       id: "2",
       createdAt: "2020-08-22T09:38:18.711Z",
       realname: "Stanley Brown",
-      avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/SULiik/128.jpg",
+      avatar: "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
@@ -100,7 +100,7 @@ const data = {
       id: "3",
       createdAt: "2020-08-22T08:06:58.183Z",
       realname: "Jennings O'Conner",
-      avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/shvelo96/128.jpg",
+      avatar: "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
@@ -123,8 +123,7 @@ const data = {
       id: "4",
       createdAt: "2020-08-22T06:58:40.907Z",
       realname: "Mr. Shanny Stiedemann",
-      avatar:
-        "https://s3.amazonaws.com/uifaces/faces/twitter/enricocicconi/128.jpg",
+       avatar: "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
@@ -147,8 +146,7 @@ const data = {
       id: "5",
       createdAt: "2020-08-22T09:19:04.478Z",
       realname: "Trisha Bins",
-      avatar:
-        "https://s3.amazonaws.com/uifaces/faces/twitter/tomas_janousek/128.jpg",
+     avatar: "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
@@ -171,7 +169,7 @@ const data = {
       id: "6",
       createdAt: "2020-08-22T11:48:47.129Z",
       realname: "Pamela Cole",
-      avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/shojberg/128.jpg",
+      avatar: "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
@@ -194,8 +192,7 @@ const data = {
       id: "7",
       createdAt: "2020-08-22T11:57:38.546Z",
       realname: "Elnora Brakus",
-      avatar:
-        "https://s3.amazonaws.com/uifaces/faces/twitter/ernestsemerda/128.jpg",
+       avatar: "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
@@ -218,8 +215,7 @@ const data = {
       id: "8",
       createdAt: "2020-08-22T05:21:44.698Z",
       realname: "Addison Goldner",
-      avatar:
-        "https://s3.amazonaws.com/uifaces/faces/twitter/kanickairaj/128.jpg",
+      avatar: "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
@@ -242,8 +238,7 @@ const data = {
       id: "9",
       createdAt: "2020-08-21T20:01:13.615Z",
       realname: "Eric Ebert",
-      avatar:
-        "https://s3.amazonaws.com/uifaces/faces/twitter/el_fuertisimo/128.jpg",
+     avatar: "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
@@ -266,7 +261,7 @@ const data = {
       id: "10",
       createdAt: "2020-08-22T07:48:57.213Z",
       realname: "Earlene Moen",
-      avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/xilantra/128.jpg",
+       avatar: "https://i.pravatar.cc/300",
       activity_periods: [
         {
           description: "Complete task AB",
